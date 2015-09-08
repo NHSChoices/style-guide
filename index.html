@@ -1,1 +1,185 @@
-<h1>NHS Choices style guide</h1>
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv=X-UA-Compatible content="IE=edge">
+	<meta name=description content="NHS Choices Style Guide">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>NHS Choices Style Guide</title>
+	
+	<!-- The live style guide will link to the live css files so is a living thing 
+	<link rel="stylesheet" href="http://www.nhs.uk/css/base.css" media="screen">
+	<link rel="stylesheet" href="http://www.nhs.uk/css/print.css" media="print">
+	<link rel="stylesheet" href="http://www.nhs.uk/css/reset.css" media="screen">
+	<link rel="stylesheet" href="http://www.nhs.uk/css/screen.css" media="screen">
+	<link rel="stylesheet" href="http://www.nhs.uk/css/refresh.css" media="screen">
+	-->
+	<link rel="stylesheet" href="css/base.css" media="screen">
+	<link rel="stylesheet" href="css/print.css" media="print">
+	<link rel="stylesheet" href="css/reset.css" media="screen">
+	<link rel="stylesheet" href="css/screen.css" media="screen">
+	<link rel="stylesheet" href="css/refresh.css" media="screen">
+	<link rel="stylesheet" href="css/styleguide.css" media="screen">
+</head>
+<body>
+
+<div class="wrap">
+<h1 class="header--styleguide header--styleguide--h1">NHS Choices style guide v1.0</h1>
+<div class="content-wrap">
+
+
+<h2 class="header--styleguide">NHS Choices elements</h2>
+
+<p>This guide helps explain how to make NHS Choices look visually consistent</p>
+<p>We are evolving a global experience language for NHS Choices digital services. The guidelines are a reference point for visual design across mobile, tablet and web.</p>
+
+<ol>
+	<li><a href="#typography">Typography</a></li>
+	<li><a href="#layout">Layout</a></li>
+	<li><a href="#colours">Colours</a></li>
+	<li><a href="#images">Images and icons</a></li>
+	<li><a href="#buttons">Buttons</a></li>
+	<li><a href="#formelements">Form elements</a></li>
+	<li><a href="#header">Global header and main navigation</a></li>
+	<li><a href="#footer">Footer</a></li>
+	<li><a href="#modules">Modules / webparts</a></li>
+	<li><a href="#misc">Miscellaneous</a></li>
+</ol>
+
+<h2 id="typography" class="header--styleguide header--section">1. Typography</h2>
+
+<h3 class="header--styleguide header--styleguide--h3">Header sizes in the main content</h3>
+
+<div class="example">
+	<span>Example</span>
+	<h1>H1 - Heading 3.6em <small>(36px Arial regular)</small></h1>
+	<h2>H2 - Section heading 2.8em <small>(28px Arial regular)</small></h2>
+	<h3>H3 - Sub-section heading 2.2em <small>(22px Arial regular)</small></h3>
+	<h4>H4 - H4 heading 1.7em <small>(17px Arial bold)</small></h4>
+	<h5>H5 - H5 heading 1.7em <small>(17px Arial bold)</small></h5>
+	<h6>H6 - H6 heading 1.7em <small>(17px Arial bold)</small></h6>
+</div>
+
+<h3 class="header--styleguide header--styleguide--h3">Main content column</h3>
+<div class="example">
+	<span>Example</span>
+	<p><strong>This is a (strong) paragraph of body copy at 1.7em (17px Arial regular)</strong></p>
+	<p>This is a regular paragraph of text at 1.7em (17px Arial regular)</p>
+</div>
+
+<h3 class="header--styleguide header--styleguide--h3">Side column</h3>
+
+<div class="example">
+	<span>Example</span>
+	<div class="col-secondary">
+		<div class="panel">
+			<h2>Heading title 1.7em <small>(17px Arial regular)</small></h2>
+			<p>Body copy 1.5em <small>(15px Arial regular)</small></p>
+		</div>
+	</div>
+</div>
+
+<h3 class="header--styleguide header--styleguide--h3">Link language and rules</h3>
+<p>Links should comply with exisiting standards and guidelines. They should be easily distinguishable from body copy using a combination of bold type and colour, along with underline or underline on hover (and focus and active states).</p>
+
+<ul>
+	<li>Links in the main content body copy are underlined. On rollover the underline disappears.</li>
+	<li>Links in the side column in a list are not underlined.</li>
+	<li>Links in the main content in a list are not underlined. They are underlined on hover.</li>
+</ul>
+
+<div class="example">
+	<span>Example</span>
+	<p><a href="">An unvisited link in the main content body is underlined</a></p>
+	<br />
+	<div class="col-secondary">
+		<div class="panel">
+			<h2>Side column heading</h2>
+			<p><a href="">An unvisited link in the side column is not underlined</a></p>
+		</div>
+	</div>
+</div>
+
+<h3 class="header--styleguide header--styleguide--h3">Lists</h3>
+
+<div class="example">
+	<span>Example</span>
+	<ul>
+	    <li>here is a bulleted list
+	    <li>joint pain, tenderness and stiffness </li>
+	    <li>inflammation in and around the joints </li>
+	    <li>restricted movement of the joints </li>
+	    <li>warm, red skin over the affected joint </li>
+	    <li>weakness and muscle wasting </li>
+	</ul>
+
+	<ol>
+	    <li>here is a numbered list
+	    <li>joint pain, tenderness and stiffness </li>
+	    <li>inflammation in and around the joints </li>
+	    <li>restricted movement of the joints </li>
+	    <li>warm, red skin over the affected joint </li>
+	    <li>weakness and muscle wasting </li>
+	</ol>
+
+	<div class="col-secondary">
+		<div class="panel">
+			<div class="panel-top">
+				<h2>Side column list of links</h2>
+				<ul>
+					<li><a title="Healthy bones" href="http://www.nhs.uk/Livewell/healthy-bones/Pages/healthy-bones.aspx">Healthy bones</a></li>
+					<li><a title="Living with a long-term condition" href="http://www.nhs.uk/planners/yourhealth/Pages/Yourhealth.aspx">Living with a long-term condition</a></li>
+					<li><a title="Osteoarthritis" href="http://www.nhs.uk/conditions/osteoarthritis">Osteoarthritis</a></li>
+					<li><a title="Rheumatoid arthritis" href="http://www.nhs.uk/conditions/Rheumatoid-arthritis">Rheumatoid arthritis</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="panel">
+			<div class="panel-top">
+				<h2>Side column list of numbered links</h2>
+				<ol>
+    				<li><a href="/Livewell/tiredness-and-fatigue/Pages/medical-causes-of-tiredness.aspx">10 medical reasons for feeling tired</a> </li>
+				    <li><a href="/livewell/loseweight/pages/height-weight-chart.aspx">Height and weight chart</a> </li>
+				    <li><a href="/Livewell/penis-health/Pages/penis-size.aspx">Penis size</a> </li>
+				    <li><a href="/Livewell/digestive-health/Pages/beat-the-bloat.aspx">Remedies for bloating and wind</a> </li>
+				    <li><a href="/Livewell/weight-loss-guide/Pages/calorie-counting.aspx">Calorie checker</a> </li>
+				    <li><a href="/Livewell/tiredness-and-fatigue/Pages/why-am-I-tired.aspx">Why am I tired all the time?</a></li>
+				    <li><a href="http://www.nhs.uk/Livewell/weight-loss-guide/Pages/losing-weight-getting-started.aspx">Free NHS 12-week weight loss plan</a> </li>
+				    <li><a href="http://www.nhs.uk/Livewell/loseweight/Pages/top-10-most-popular-diets-review.aspx">Top diets review for 2015</a></li>
+				    <li><a href="/Livewell/Childrenssleep/Pages/howmuchsleep.aspx">How much sleep do kids need?</a></li>
+				    <li><a href="/Livewell/alcohol/Pages/Hangovers.aspx">Hangover cures</a></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<h3 class="header--styleguide header--styleguide--h3">An example of a live article page (main content column)</h3>
+
+<div class="example">
+	<span>Example</span>
+	<div class="col-primary">
+		<div class="healthaz-content">
+			<h1>Arthritis</h1>
+			<h2>Introduction</h2>
+			<p><strong>Arthritis is a common condition that causes pain and inflammation in a joint.</strong></p>
+			<p>In the UK, around 10 million people have arthritis. It affects people of all ages, including children (see below).</p>
+			<h3>Types of arthritis</h3>
+			<p>The two most common types of arthritis are osteoarthritis and rheumatoid arthritis. </p>
+			<h4>Osteoarthritis</h4>
+			<p>Osteoarthritis is the most common type of arthritis in the UK, affecting around 8 million people.</p>
+			<p>It often develops in people who are over 50 years of age. However, it can occur at any age as a result of an injury or another joint-related condition.</p>
+			<p>In osteoarthritis, the cartilage (connective tissue) between the bones gradually erodes, causing bone in the joints to rub together. The joints that are most commonly affected are those in the hands, spine, knees and hips.</p>
+			<p>Read more about <a  href="http://www.nhs.uk/conditions/osteoarthritis" >osteoarthritis</a>. </p>
+		</div>
+	</div>
+</div>
+
+
+</div>
+</div>
+
+</body>
+</html>
