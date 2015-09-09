@@ -1,4 +1,6 @@
 .wrap {margin-bottom:30px; margin-top:30px;}
+.wrap.nomarginbottom {margin-bottom:0;}
+.wrap.nomargintop {margin-top:0;}
 .content-wrap {background:#fff; padding:20px;}
 .header--styleguide {color:#0064b7;}
 .header--section {border-top:1px solid #e5e5e5; margin-top:30px; padding-top:30px;}
@@ -18,11 +20,19 @@ a:hover, a:active, a:focus {text-decoration:none;}
 .col-secondary a:hover, .col-secondary a:active, .col-secondary a:focus {text-decoration:underline;}
 .col-secondary ul, .col-secondary ol {margin-bottom:1em;}
 .col-secondary ul li, .col-secondary ol li {margin-bottom:0;}
-.col-secondary ol li {border-bottom:1px solid #efefef;
-    color:#00649b;
-    font-size:1.4em;
-    padding:.5em;
-    position:relative;
-}
-
+.col-secondary ol li {border-bottom:1px solid #efefef; color:#00649b; font-size:1.4em; padding:.5em; position:relative; }
 .col-secondary ol li:last-child {border-bottom:0; padding-bottom:0;}
+.nopaddingbottom {padding-bottom:0;}
+.nomarginbottom {margin-bottom:0;}
+.livewell h1 {margin-left:.4em;}
+.livewell .row .two {margin-right:0; width:56.9em;}
+.livewell .col {margin:0;}
+.livewell .article-header-image {border:1px solid  #e2e2e2; border-bottom:0; padding:1.5em;}
+.livewell .article-header-image img {width:100%;}
+.livewell .article {border:1px solid  #e2e2e2; border-top:0; padding:1.5em;}
+
+@media (max-width:640px) {
+	.wrap, .col-primary {width:auto !important;}
+	.col-secondary {border:0; padding:0; width:auto !important;}
+ 
+}
