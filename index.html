@@ -487,6 +487,74 @@
 			</div>
 		</div>
 
+		<h2 id="formelements" class="header--styleguide header--section">6. Form elements</h2>
+		<div class="example formelements">
+			<span>Example</span>
+			<div class="row clear">
+				<div class="col">
+					<p>Standard form</p>
+					<label for="textinput" class="nomargintop">Text input</label>
+					<input type="text" placeholder="Example" name="textinput" id="textinput" />
+
+					<label for="selectinput">Select input</label>
+					<select name="selectinput" id="selectinput">
+						<option value="">Dentist</option>
+						<option value="">Optician</option>
+						<option value="">GP</option>
+					</select>
+
+					<label for="passwordinput">Password input</label>
+					<input type="password" name="passwordinput" id="passwordinput" />
+				</div>
+				<div class="col">
+					<p>Form states</p>
+					<label for="textinputfocus" class="nomargintop">Text input focus</label>
+					<input class="textinputfocus" type="text" placeholder="Example" name="textinputfocus" id="textinputfocus" />
+
+					<label for="textinputerror" class="labelerror">Text input error/warning</label>
+					<input class="textinputerror" type="text" placeholder="Example" name="textinputerror" id="textinputerror" />
+
+					<label for="selectinputfocus">Select input</label>
+					<select class="selectinputfocus" name="selectinputfocus" id="selectinputfocus">
+						<option value="">Dentist</option>
+						<option value="">Optician</option>
+						<option value="">GP</option>
+					</select>
+
+					<p class="margintop20"><label for="checkboxerror" class="hidden">Checkbox</label>
+					<input class="checkbox" name="checkbox" type="checkbox" checked="checked" /> &nbsp; <span class="error">Checkbox field with error message</span></p>
+
+				</div>
+			</div>
+
+			<div class="row clear margintop20">
+				<div class="col col-small">
+					<p>Check boxes</p>
+					<p><input type="checkbox" class="checkbox" /> Unchecked</p>
+					<p><input type="checkbox" class="checkbox" checked="checked" /> Checked</p>
+				</div>
+				<div class="col col-small">
+					<p>Radio buttons</p>
+					<p><input type="radio" class="checkbox" name="radiobutton" /> Unselected</p>
+					<p><input type="radio" class="checkbox" checked="checked" name="radiobutton" /> Selected</p>
+				</div>
+			</div>
+
+
+			<div class="row clear margintop20">
+				<p>List boxes</p>
+				<select class="multipleselect" name="listitems" multiple size="6">
+					<option value="1">List item 1</option>
+					<option value="2">List item 2</option>
+					<option value="3">List item 3</option>
+					<option value="4">List item 4</option>
+					<OPTION value="5">List item 5</option>
+				</select>
+			</div>
+
+
+		</div>
+
 	</div>
 </div>
 

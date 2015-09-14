@@ -22,9 +22,10 @@ a:hover, a:active, a:focus {text-decoration:none;}
 .col-secondary ul li, .col-secondary ol li {margin-bottom:0;}
 .col-secondary ol li {border-bottom:1px solid #efefef; color:#00649b; font-size:1.5em; padding:.5em; position:relative; }
 .col-secondary ol li:last-child {border-bottom:0; padding-bottom:0;}
-.nopaddingbottom {padding-bottom:0;}
-.nomarginbottom {margin-bottom:0;}
-.margintop20 {margin-top:20px;}
+.nopaddingbottom {padding-bottom:0 !important;}
+.nomarginbottom {margin-bottom:0 !important;}
+.nomargintop {margin-top:0 !important;}
+.margintop20 {margin-top:20px !important;}
 .livewell h1 {margin-left:.4em;}
 .livewell .row .two {margin-right:0; width:56.9em;}
 .livewell .col {margin:0;}
@@ -103,6 +104,19 @@ a:hover, a:active, a:focus {text-decoration:none;}
 .header .searchbar {float:none;}
 .header .submit input, .header .submit input:hover {background-image:url(../img/search-magnifying-glass.png);}
 .header .submit input.active {background-color:#036;}
+/* form elements */
+.formelements .col {margin-right:80px; width:28em;}
+.formelements .col-small {margin-right:60px; width:16em;}
+.formelements label {display:block; margin-bottom:5px; margin-top:30px;}
+.formelements label:first-child {margin-top:0;}
+.formelements input {padding:.3em; width:100%;}
+.formelements select {box-shadow:0 0 3px 0 #fff; font-size:1.4em; padding:.3em; width:100%;}
+.formelements input:focus, .textinputfocus, .selectinputfocus {box-shadow:0 0 2px 0 #999;}
+.labelerror {color:#f00;}
+input.textinputerror {border:1px solid #f00; box-shadow:0 0 3px 0 #f00;}
+.formelements .checkbox {width:auto;}
+.formelements span.error {background:none; border:0; display:inline; margin:auto; position:relative; padding:0;}
+.formelements .multipleselect {width:18em;}
 
 @media (max-width:640px) {
 	.wrap, .col-primary {width:auto !important;}
