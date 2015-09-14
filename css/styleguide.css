@@ -63,16 +63,16 @@ a:hover, a:active, a:focus {text-decoration:none;}
 .bth .col-primary .image-small {float:right; margin:0 0 2em 2em; width:166px;}
 .bth .col-primary .image img {width:100%;}
 .bth .col-primary .image p {font-size:1.5em; font-weight:bold; padding-top:.2em;}
-/* buttons */
+/* colours */
 .colour-col ul {list-style:none;}
 .colour-col ul li {float:left; margin-right:30px; text-align:center; width:12%;}
 .colour-col span {display:inline-block; height:50px; width:50px;}
-.choices-blue {background:#0065b7;}
+.choices-blue {background:#0064b7;}
 .brand-orange {background:#f60;}
 .bullseye-red {background:#900;}
 .body-text {background:#333;}
 .title-headers {background:#587300;}
-.nhs-blue {background:#0065b7;}
+.nhs-blue {background:#0064b7;}
 .top-tertiary {background:#666;}
 .white {border:1px solid #ddd;}
 .error {background:#f00;}
@@ -89,6 +89,20 @@ a:hover, a:active, a:focus {text-decoration:none;}
 .grey02 {background:#e2e2e2;}
 .grey03 {background:#efefef;}
 .grey04 {background:#f7f7f7;}
+/* buttons */
+.buttons .col {margin-right:30px;}
+.buttons p {margin-bottom:10px;} 
+.buttons p.button {background:none; margin-bottom:40px;}
+.button a {background:#0064b7; border-radius:5px; color:#fff; padding:10px 20px; text-decoration:none;}
+.button a:hover, .button a:active, .button a:focus, .button-active a {background:#036;}
+.footer-button-wrap {background:#0064b7; display:inline-block; padding:20px 30px;}
+.footer-button {background:#fff; border-radius:5px; padding:10px;}
+.footer-button-wrap p.button {margin:0; padding:5px 0;}
+.footer-button-wrap p.button a {border:0; font-size:13px; font-weight:bold; padding:10px;}
+.header {border:0; margin:60px 0 0 0; padding:0;}
+.header .searchbar {float:none;}
+.header .submit input, .header .submit input:hover {background-image:url(../img/search-magnifying-glass.png);}
+.header .submit input.active {background-color:#036;}
 
 @media (max-width:640px) {
 	.wrap, .col-primary {width:auto !important;}
