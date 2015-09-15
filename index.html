@@ -187,7 +187,8 @@
 		<p>The following is a layout for the desktop view. There is a breakpoint at 640px where the side content moved to be underneath the main content column.</p>
 	</div>
 </div>
-<div class="wrap nomargintop">
+
+<div class="wrap nomargintop nomarginbottom">
 	<p class="nopaddingbottom"><img src="img/layout.jpg" alt="layout" /></p>
 	<div class="content-wrap">
 		<h2 id="images" class="header--styleguide header--section">3. Images</h2>
@@ -554,8 +555,245 @@
 				</select>
 			</div>
 
+		</div>
+
+	</div>
+</div>
+
+<div class="wrap nomargintop nomarginbottom">
+	<div class="content-wrap">
+		<h2 id="header" class="header--styleguide header--section">7. Desktop global header, main navigation and dropdown menu</h2>		
+		<p class="nopaddingbottom">Inactive main header/navigation</p>
+	</div>
+</div>
+
+<div class="wrap">
+
+	<div class="topnavwrap clear">
+		<ul class="info-nav">
+			<li class="first"><a accesskey="1" href="http://www.nhs.uk/Pages/HomePage.aspx">Home</a></li>
+			<li><a href="http://www.nhs.uk/aboutNHSChoices/Pages/AboutNHSChoices.aspx">About</a></li>
+			<li><a accesskey="9" href="http://www.nhs.uk/aboutNHSChoices/Pages/ContactUs.aspx">Contact</a></li>
+			<li><a href="http://www.nhs.uk/tools/pages/toolslibrary.aspx">Tools</a></li>
+			<li><a href="/video/pages/MediaLibrary.aspx">Video</a></li>
+			<li><a href="https://www.ebs.ncrs.nhs.uk/">e-Referral Service</a>
+			<li><a href="http://www.healthunlocked.com/nhschoices/">Communities</a>
+			<li class="last"><a href="http://www.nhs.uk/ipg/Pages/IPStart.aspx">IPS</a>
+		</ul>
+		<div class="tab-login anonymous-login"> 
+			<ul class="translate"> 
+				<li class="translate-item"><a class="translate-text" href="http://www.nhs.uk/pages/languagehub.aspx">Translate</a></li>
+			</ul>
+			<ul class="personal-header clear">
+				<li class="logged-out"><a href="http://www.nhs.uk/Personalisation/Login.aspx">Log in</a>&nbsp;or</li>
+				<li class="create-account"><a href="http://www.nhs.uk/Personalisation/Registration.aspx">create an account</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="header main-header">
+  		<div class="heading">
+      		<h1><img width="212" height="35" alt="NHS Choices" src="img/logo.gif"><span>Your health, your choices</span></h1>
+  		</div>
+  		<p class="hidden"><strong>Information navigation</strong></p>
+	  <div class="searchbar">
+	    <form onsubmit="return NhsUk_OnSubmit();" action="http://www.nhs.uk/Search/Pages/Results.aspx" method="get" id="gs">
+    		<input type="hidden" name="___JSSniffer" id="___JSSniffer" value="true">
+			<fieldset>
+				<legend class="hidden">Search entire site</legend>	
+				<div id="IdSearchBoxContainer" class="search-inner">
+					<div id="search-results-container">
+						<label for="q"><span class="hidden">Enter a search term: </span><input type="text" maxlength="500" accesskey="4" placeholder="Enter a search term" name="q" id="q" autocomplete="off"></label>
+					</div>
+					<div class="submit-container">
+						<div class="submit">
+							<input type="submit" value="Search">
+						</div>
+					</div>
+				</div>
+			</fieldset>
+    	</form>
+	  </div>
+
+  	<div id="main-navigation" class="main-nav clear">
+    	<p class="hidden"><strong>Main navigation</strong></p>    
+    		<div id="ctl00_Header_mainNavigation">
+				<ul>
+					<li id="health-az-topnav" class="health-az"><a href="http://www.nhs.uk/Conditions/Pages/hub.aspx">Health A-Z</a>
+						<div>
+							<ul>
+								<li class="first"><span>Hundreds of conditions explained</span></li>
+								<li><a href="http://www.nhs.uk/Conditions/Arthritis">Arthritis<span class="hidden"> information</span></a></li>
+								<li><a href="http://www.nhs.uk/conditions/asthma">Asthma<span class="hidden"> information</span></a></li>
+								<li><a href="http://www.nhs.uk/Conditions/Back-pain">Back pain<span class="hidden"> information</span></a></li>
+								<li><a href="http://www.nhs.uk/Conditions/stress-anxiety-depression/Pages/low-mood-stress-anxiety.aspx">Stress, anxiety, depression<span class="hidden"> information</span></a></li>
+								<li><a href="http://www.nhs.uk/Conditions/Cancer-of-the-breast-female">Breast cancer<span class="hidden"> information</span></a></li>
+								<li><a href="http://www.nhs.uk/Conditions/pregnancy-and-baby/pages/pregnancy-and-baby-care.aspx">Pregnancy and baby<span class="hidden"> information</span></a></li>
+								<li><a href="http://www.nhs.uk/Conditions/Diabetes/Pages/Diabetes.aspx">Diabetes<span class="hidden"> information</span></a></li>
+								<li><a href="http://www.nhs.uk/Conditions/dementia-guide/Pages/about-dementia.aspx">Dementia<span class="hidden"> information</span></a></li>
+								<li><a href="http://www.nhs.uk/Conditions/Coronary-heart-disease">Heart disease<span class="hidden"> information</span></a></li>
+								<li><a href="http://www.nhs.uk/conditions/measles">Measles<span class="hidden"> information</span></a></li>
+								<li><a href="http://www.nhs.uk/Conditions/nhs-health-check/Pages/NHS-Health-Check.aspx">NHS Health Check<span class="hidden"> information</span></a></li>
+								<li><a href="http://www.nhs.uk/Conditions/vaccinations/Pages/vaccination-schedule-age-checklist.aspx">Vaccinations<span class="hidden"> information</span></a></li>
+								<li><a href="http://www.nhs.uk/CHQ/Pages/home.aspx"> Common health questions</a></li>
+								<li><a href="http://www.nhs.uk/symptomcheckers/pages/symptoms.aspx"> Symptom checkers</a></li>
+								<li class="last bold"><a href="http://www.nhs.uk/Conditions/Pages/BodyMap.aspx?Index=A"> All A-Z topics</a></li>
+							</ul>
+						</div>
+					</li>
+					<li id="livewell-topnav" class="livewell"><a href="http://www.nhs.uk/livewell/Pages/Livewellhub.aspx">Live Well</a>
+						<div>
+							<ul>
+								<li class="first"><span>Over 100 topics on healthy living</span></li>
+								<li><a href="http://www.nhs.uk/Livewell/alcohol">Alcohol<span class="hidden"> articles</span></a></li>
+								<li><a href="http://www.nhs.uk/LiveWell/c25k/Pages/couch-to-5k.aspx">Couch to 5K<span class="hidden"> articles</span></a></li>
+								<li><a href="http://www.nhs.uk/livewell/dentalhealth">Teeth and dentistry<span class="hidden"> articles</span></a></li>
+								<li><a href="http://www.nhs.uk/livewell/fitness">Fitness<span class="hidden"> articles</span></a></li>
+								<li><a href="http://www.nhs.uk/livewell/winterhealth/pages/fluandthefluvaccine.aspx">The flu jab<span class="hidden"> articles</span></a></li>
+								<li><a href="http://www.nhs.uk/livewell/healthy-eating">Healthy eating<span class="hidden"> articles</span></a></li>
+								<li><a href="http://www.nhs.uk/livewell/loseweight">Lose weight<span class="hidden"> articles</span></a></li>
+								<li><a href="http://www.nhs.uk/livewell/mentalhealth/Pages/Mentalhealthhome.aspx">Mental health<span class="hidden"> articles</span></a></li>
+								<li><a href="http://www.nhs.uk/Livewell/Pain/Pages/Painhome.aspx">Pain<span class="hidden"> articles</span></a></li>
+								<li><a href="http://www.nhs.uk/livewell/sexualhealth">Sexual health<span class="hidden"> articles</span></a></li>
+								<li><a href="http://www.nhs.uk/LiveWell/sleep/Pages/sleep-home.aspx">Sleep<span class="hidden"> articles</span></a></li>
+								<li><a href="http://www.nhs.uk/livewell/smoking">Stop smoking<span class="hidden"> articles</span></a></li>
+								<li><a href="http://www.nhs.uk/livewell/tiredness-and-fatigue">Tiredness<span class="hidden"> articles</span></a></li>
+								<li><a href="http://www.nhs.uk/tools/pages/toolslibrary.aspx">Health check tools</a></li>
+								<li class="last bold"><a href="http://www.nhs.uk/livewell/pages/topics.aspx">All Live Well topics</a></li>
+							</ul>
+						</div>
+					</li>
+					<li id="carers-topnav" class="carers"><a href="http://www.nhs.uk/Conditions/social-care-and-support-guide/Pages/what-is-social-care.aspx"> Care and support</a>
+						<div>
+							<ul>
+								<li class="first"><span>Your essential guide to social care</span></li>
+								<li><a href="http://www.nhs.uk/Conditions/social-care-and-support-guide/Pages/how-can-i-get-social-care-support.aspx">About social care</a></li>
+								<li><a href="http://www.nhs.uk/conditions/social-care-and-support-guide/Pages/choosing-care-services.aspx">Choosing care services</a></li>
+								<li><a href="http://www.nhs.uk/Conditions/social-care-and-support-guide/Pages/assessment-care-needs.aspx">Social care assessments</a></li>
+								<li><a href="http://www.nhs.uk/Conditions/social-care-and-support-guide/Pages/nhs-continuing-care.aspx">NHS continuing care</a></li>
+								<li><a href="http://www.nhs.uk/Conditions/social-care-and-support-guide/Pages/mental-capacity.aspx">Mental capacity</a></li>
+								<li><a href="http://www.nhs.uk/Conditions/social-care-and-support-guide/Pages/home-care.aspx">Home care</a></li>
+								<li><a href="http://www.nhs.uk/Conditions/social-care-and-support-guide/Pages/care-homes.aspx">Care homes</a></li>
+								<li><a href="http://www.nhs.uk/Conditions/social-care-and-support-guide/Pages/breaks-for-carers-respite-care.aspx">Breaks from caring</a></li>
+								<li><a href="http://www.nhs.uk/Conditions/social-care-and-support-guide/Pages/carers-rights-care-act-2014.aspx">Carers' rights</a></li>
+								<li><a href="http://www.nhs.uk/Conditions/social-care-and-support-guide/Pages/young-carers-rights.aspx">Young carers</a></li>
+								<li class="bold"><a href="http://www.nhs.uk/conditions/social-care-and-support-guide">All care and support topics</a></li>
+							</ul>
+						</div>
+					</li>
+					<li id="news-topnav" class="news"><a href="http://www.nhs.uk/News/Pages/NewsIndex.aspx" onclick="dcsMultiTrack('DCSext.HeaderMenuUrlClicked','/News/Pages/NewsIndex.aspx','WT.dl','121')"> Health news</a>
+						<div>
+							<ul>
+								<li class="first"><span>Health news stories unspun</span></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Food%2fdiet">Diet and nutrition<span class="hidden"> news reports</span></a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Obesity">Obesity and weight loss<span class="hidden"> news reports</span></a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Neurology">Neurology and dementia<span class="hidden"> news reports</span></a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Lifestyle%2fexercise">Lifestyle and environment<span class="hidden"> news reports</span></a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Pregnancy%2fchild">Pregnancy and children<span class="hidden"> news reports</span></a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Cancer">Cancer<span class="hidden"> news reports</span></a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Medication">Drugs and vaccines<span class="hidden"> news reports</span></a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Heart%2flungs">Heart and lungs<span class="hidden"> news reports</span></a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Medical+practice">Medical practice<span class="hidden"> news reports</span></a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Older+people">Older people and ageing<span class="hidden"> news reports</span></a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Genetics%2fstem+cells">Genetics and stem cells<span class="hidden">  news reports</span></a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Mental+health">Mental health<span class="hidden"> news reports</span></a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Diabetes">Diabetes<span class="hidden"> news reports</span></a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicID=QA+articles">Topical questions and answers</a></li>
+								<li><a href="http://www.nhs.uk/news/pages/newsarticles.aspx?TopicId=Special+reports"> Special reports</a></li>
+								<li class="bold"><a href="http://www.nhs.uk/news">All Behind the Headlines news</a></li>
+							</ul>
+						</div>
+					</li>
+					<li id="find-services-topnav" class="find-services"><a href="http://www.nhs.uk/service-search">Services near you</a>
+						<div>
+							<ul>
+								<li class="topnav-first"><p class="topnav-image"><img alt=" its your choice" src="img/its-your-choice.gif"></p><p class="topnav-heading">Don't miss out ...</p><p>Exercise your right to choice in the NHS</p><p class="topnav-link"><a href="http://www.nhs.uk/choiceinthenhs/Pages/choicehome.aspx">Learn about patient choice now</a></p></li>
+								<li><a href="http://www.nhs.uk/Service-Search/Accident-and-emergency-services/LocationSearch/428">A&amp;E<span class="hidden"> search</span></a></li>
+								<li><a href="http://www.nhs.uk/Service-Search/Hospital/LocationSearch/7/Hospitals">Hospitals<span class="hidden"> search</span></a></li>
+								<li><a href="http://www.nhs.uk/Service-Search/GP/LocationSearch/4">GPs<span class="hidden"> search</span></a></li>
+								<li><a href="http://www.nhs.uk/Service-Search/Dentist/LocationSearch/3">Dentists<span class="hidden">search</span></a></li>
+								<li><a href="http://www.nhs.uk/Service-Search/Pharmacy/LocationSearch/10">Pharmacies<span class="hidden"> search</span></a></li>
+								<li><a href="http://www.nhs.uk/Service-Search/Care-homes-and-care-at-home/LocationSearch/11">Home care and care homes<span class="hidden"> search</span></a></li>
+								<li><a href="http://www.nhs.uk/Service-Search/Care at home/LocationSearch/1833">Care homes and care at home<span class="hidden"> search</span></a></li>
+								<li><a href="http://www.nhs.uk/Service-Search/Maternity-service/LocationSearch/1802">Maternity<span class="hidden"> search</span></a></li>
+								<li><a href="http://www.nhs.uk/Service-Search/Depression/LocationSearch/288">Depression<span class="hidden"> search</span></a></li>
+								<li><a href="http://www.nhs.uk/Service-Search/Alcohol-addiction/LocationSearch/1805">Alcohol<span class="hidden"> search</span></a></li>
+								<li><a href="http://www.nhs.uk/Service-Search/Sexual-health-services/LocationSearch/1847">Sexual health<span class="hidden"> search</span></a></li>
+								<li><a href="http://www.nhs.uk/Service-Search/Hospital/LocationSearch/7/Consultants">Consultants<span class="hidden"> search</span></a></li>
+								<li><a href="http://www.nhs.uk/Service-Search/Stop-smoking-services/LocationSearch/1846">Stop smoking services</a></li>
+								<li><a href="http://www.nhs.uk/Service-Search/Urgent-Care/LocationSearch/0">Urgent care services</a></li>
+								<li class="last bold"><a href="http://www.nhs.uk/Service-Search/Services">All directories</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
 
 		</div>
+  
+	</div>
+
+</div>
+
+<div class="wrap nomargintop zindex">
+	<div class="content-wrap">
+		<p class="nopaddingbottom">Active main header/navigation on hover</p>
+	</div>
+	<p class="margintop30 nopaddingbottom"><img src="img/header-active.gif" alt="" /></p>
+</div>
+
+<div class="wrap nomarginbottom">
+	<div class="content-wrap">
+		<p class="nopaddingbottom">Active section 'Live Well' example</p>
+	</div>
+	<p class="margintop30 nopaddingbottom"><img src="img/header-active-livewell.gif" alt="" /></p>
+</div>
+
+<div class="wrap">
+	<div class="content-wrap">
+		<p class="nopaddingbottom">Active section 'Health A-Z' side navigation treatment example</p>
+	</div>
+	<p class="margintop30 nopaddingbottom"><img src="img/header-active-healthaz.gif" alt="" /></p>
+</div>
+
+<div class="wrap nomarginbottom">
+	<div class="content-wrap">
+		<h3 class="header--styleguide header--styleguide--h3 nomargintop">Subnavigation 'Health A-Z, Asthma' example</h3>		
+	
+
+<div class="example healthaz">
+	<span>Example</span>
+	<div class="tabs-nav">
+		<ul class="tabs clear">
+			<li class="active"><span class="active-text">Overview</span></li>
+			<li><span><a href="http://www.nhs.uk/Conditions/Asthma/Pages/Olwensstory.aspx"><span class="hidden">Asthma </span>Real stories</a></span></li>
+			<li><span><a href="http://www.nhs.uk/Conditions/Asthma/Pages/MedicineGuidePage.aspx"><span class="hidden">Asthma </span>Medicines info</a></span></li>
+			<li><span><a href="http://www.nhs.uk/Conditions/Asthma/Pages/clinical-trial.aspx"><span class="hidden">Asthma </span>Clinical trials</a></span></li>
+			<li><span><a href="http://www.nhs.uk/Conditions/Asthma/Pages/Community.aspx"><span class="hidden">Asthma </span>Community</a></span></li>
+		</ul>
+	</div>
+	<ul class="sub-nav clear">
+		<li class="active"><span class="active-text">Asthma</span></li>
+		<li><span><a href="http://www.nhs.uk/Conditions/Asthma/Pages/Symptoms.aspx"><span class="hidden">Asthma </span>Symptoms</a></span></li>
+		<li><span><a href="http://www.nhs.uk/Conditions/Asthma/Pages/Causes.aspx"><span class="hidden">Asthma </span>Causes</a></span></li>
+		<li><span><a href="http://www.nhs.uk/Conditions/Asthma/Pages/Diagnosis.aspx"><span class="hidden">Asthma </span>Diagnosis</a></span></li>
+		<li><span><a href="http://www.nhs.uk/Conditions/Asthma/Pages/Treatment.aspx"><span class="hidden">Asthma </span>Treatment</a></span></li>
+		<li><span><a href="http://www.nhs.uk/Conditions/Asthma/Pages/living-with.aspx"><span class="hidden">Asthma </span>Living with</a></span></li>
+	</ul>
+</div>
+
+
+
+
+
+
+	</div>
+</div>
+
+
+
+<div class="wrap nomargintop wrap-fonts">
+	<div class="content-wrap">
 
 		<h2 id="fonts" class="header--styleguide header--section">11. Fonts</h2>
 		<p>Typefaces are an important part of the NHS identity. The consistent use of the NHS typefaces is essential to helping us establish a recognised and professional brand. These typefaces must be clean, clear and easy to read. It is vital that they are used correctly across all services, messages and materials.</p>
