@@ -144,7 +144,7 @@ ul.personal-header li.logged-out, ul.personal-header li.logged-in {background-im
 .healthaz ul.tabs:after {content:none;}
 .healthaz ul.tabs li {background:#016799; background:#06c; background:#1966b5; background:#578300; border-left:2px solid #f7f7f7; bottom:-1px; line-height:1.5em; margin-right:0; position:relative; text-align:center;}
 .healthaz ul.tabs li a {display:block; font-weight:normal; padding:.3em 1em;}
-.healthaz ul.tabs li a:hover, .healthaz ul.tabs li a:focus {background:#360;}
+.healthaz ul.tabs li a:hover, .healthaz ul.tabs li a:focus, .healthaz ul.tabs li a.hover {background:#360; text-decoration:underline;}
 .healthaz ul.tabs li a:active {background:#fff; color:#333;}
 .healthaz ul.tabs li.active {background:#fff; border:1px solid #e2e2e2; border-bottom:0; margin-left:2px; padding:.3em 1em;}
 .healthaz ul.tabs li.active .active-text {color:#333; font-weight:normal; padding:0;}
@@ -158,6 +158,7 @@ ul.personal-header li.logged-out, ul.personal-header li.logged-in {background-im
 .healthaz .sub-nav li a, .healthaz .sub-nav li span {line-height:1em;}
 .example.healthaz li span {border:0; display:inline; font-size:inherit; margin-left:0; margin-top:0; padding:0; position:relative;}
 .example.healthaz .sub-nav li span {padding:0 .8em;}
+.nonunderline {text-decoration:none !important;}
 
 @media (max-width:640px) {
 	.wrap, .col-primary {width:auto !important;}
