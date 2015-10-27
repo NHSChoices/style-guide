@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<title>Accessibility and Javascript Frameworks</title>
+
+<style>
+	section {display:block;}
+	html {font-size:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;}
+	html, input {font-family:sans-serif;}
+	body {margin:0;}
+	a:focus {outline:thin dotted;}
+	a:hover, a:active {outline:0;}
+	h1 {font-size:2em; margin:.4em 0;}
+	abbr[title] {border-bottom:1px dotted;}
+	p, pre {margin:1em 0;}
+	ul {margin:2em 0; padding:0 0 0 40px;}
+	img {border:0; -ms-interpolation-mode:bicubic;}
+	input {font-size:100%; line-height:normal; margin:0; vertical-align:baseline; *vertical-align:middle;}
+	* { -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+	.banner {margin:20px; position:relative; z-index:1;}
+	.container {font-family:Arial, sans-serif; height:100%; left:0; position:absolute; top:0; width:100%;}
+	.container > input, .container > a {bottom:0; cursor:pointer; font-size:16px; height:34px; line-height:34px; position:fixed; width:20%;}
+	.container > input {opacity:0; z-index:1000;}
+	.container > a {background:#0064b7; color:#fff; font-weight:700; text-align:center; text-decoration:none; text-shadow:1px 1px 1px rgba(151,24,64,0.2); z-index:10;}
+	.container:before {background:#0064b7; bottom:0; content:''; height:34px; position:fixed; width:100%; z-index:9;}
+	#c1, #c1 + a {left:0;}
+	#c2, #c2 + a {left:20%;}
+	#c3, #c3 + a {left:40%;}
+	#c4, #c4 + a {left:60%;}
+	#c5, #c5 + a {left:80%;}
+	.container > input:checked + a, .container > input:checked:hover + a {background:#036;}
+	.container > input:checked + a:after, .container > input:checked:hover + a:after {border:solid transparent; border-bottom-color:#036; border-width:20px; bottom:100%; content:''; height:0; left:50%; margin-left:-20px; pointer-events:none; position:absolute; width:0;}
+	.container > input:hover + a {background:#0272d9;}
+	.container > input:hover + a:after {border-bottom-color:#0272d9;}
+	.sections, .section {height:100%; position:relative; width:100%;}
+	.sections {left:0; top:0; -webkit-transition:all 0.6s ease-in-out; -moz-transition:all 0.6s ease-in-out; -o-transition:all 0.6s ease-in-out; -ms-transition:all 0.6s ease-in-out; transition:all 0.6s ease-in-out; -webkit-transform:translate3d(0, 0, 0); -webkit-backface-visibility:hidden;}
+	.section {background:#fff; overflow:hidden; margin:0 auto; width:80%;}
+	.sectioncontainer {margin:100px 0 0 0;}
+	#c1:checked ~ .sections {-webkit-transform:translateY(0%); -moz-transform:translateY(0%); -o-transform:translateY(0%); -ms-transform:translateY(0%); transform:translateY(0%);}
+	#c2:checked ~ .sections {-webkit-transform:translateY(-100%); -moz-transform:translateY(-100%); -o-transform:translateY(-100%); -ms-transform:translateY(-100%); transform:translateY(-100%);}
+	#c3:checked ~ .sections {-webkit-transform:translateY(-200%); -moz-transform:translateY(-200%); -o-transform:translateY(-200%); -ms-transform:translateY(-200%); transform:translateY(-200%);}
+	#c4:checked ~ .sections {-webkit-transform:translateY(-300%); -moz-transform:translateY(-300%); -o-transform:translateY(-300%); -ms-transform:translateY(-300%); transform:translateY(-300%);}
+	#c5:checked ~ .sections {-webkit-transform:translateY(-400%); -moz-transform:translateY(-400%); -o-transform:translateY(-400%); -ms-transform:translateY(-400%); transform:translateY(-400%);}
+	p, li, a {font-size:20px;}
+	a {color:#0064b7; padding:2px 4px;}
+	a:hover {background:#efefef; color:#578300;}
+	.banner a:hover {background:none;}
+	ul ul {margin-top:10px;}
+	li {margin-bottom:30px;}
+	pre {font-size:15px;}
+	style.editable {background:#000; border:1px solid #000; color:#fff; display:block; padding:0 20px 10px 20px; width:70%;}
+	.banner span {color:#ccc; padding-left:8px; position:relative; top:-8px;}
+	a.ext {background-image: url(data:image/gif;base64,R0lGODlhCQAJAJEDAA9tu/D2+wBkt////yH5BAEAAAMALAAAAAAJAAkAAAITnC0px6o40gkArUEbi1Bz7zxDAQA7); background-position:right top; background-repeat:no-repeat; padding-right:12px;}
+	.large {font-size:24px;}
+	.source {font-size:16px;}
+</style>
+
+<div class="banner">
+	<a href="index.html"><img src="data:image/png;base64,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" alt="NHS Choices" width="212" height="35" /></a></div>
+
+<div class="container">
+
+	<input type="radio" name="link" checked="checked" id="c1"/>
+	<a href="#p1">Accessibility?</a>
+	<input type="radio" name="link" id="c2"/>
+	<a href="#p2">Why care?</a>
+	<input type="radio" name="link" id="c3"/>
+	<a href="#p3">JavaScript</a>
+	<input type="radio" name="link" id="c4"/>
+	<a href="#p4">Aria</a>
+	<input type="radio" name="link" id="c5"/>
+	<a href="#p5">Other</a>
+
+	<div class="sections">
+
+		<section id="p1" class="section">
+			<div class="sectioncontainer">
+				<h1>What is web accessibility?</h1>
+				
+				<p class="large"><em>Web accessibility means that people with disabilities can use the web</em><br /><a href="https://www.w3.org/WAI/intro/accessibility.php" class="source ext">W3C</a></p>
+
+				<ul>
+					<li>people can perceive, understand, navigate, interact, and contribute to the web</li>
+					<li>disabilities include, visual, auditory, physical, speech, cognitive, and neurological</li>
+				</ul>
+
+			</div>
+		</section>
+
+		<section id="p2" class="section">
+			<div class="sectioncontainer">
+				<h1>Why care?</h1>
+				<ul>
+					<li>11 million people in Great Britain have a limiting long term illness, impairment or disability<br /><a href="https://www.gov.uk/government/publications/disability-facts-and-figures/disability-facts-and-figures" class="source ext">gov.uk</a>
+					<li>The Equality Act 2010 (formerly the Disability Discrimination Act 1995, except in Northern Ireland)
+						<ul>
+							<li>Discrimination against people with disabilities is prohibited by law.<br />This includes websites.
+						</ul>
+				</ul>
+			</div>
+		</section>
+
+		<section id="p3" class="section">
+			<div class="sectioncontainer">
+				<h1>JavaScript</h1>
+				<ul>
+					<li>Do people still disable JavaScript...?
+					<li>According to webtrends, it is a very small number BUT we should still not ignore them (1,798 out of 572,659,753 - 0.000003%)
+					<li>Most screen readers support JavaScript (JAWS, Window-Eyes, VoiceOver, NVDA)
+					<li>Where possible, provide a non-javascript solution (e.g. form server calls), then progressively enhance
+					<li>By all means, use a framework - angular, ember, backbone, react - which can make a richer more responsive user experience
+					<li>Try and ensure your app is accessible...
+				</ul>
+			</div>
+		</section>
+
+		<section id="p4" class="section">
+			<div class="sectioncontainer">
+				<h1>It's all about the ARIA</h1>
+				<ul>
+					<li>Accessible Rich Internet Applications (ARIA, or WAI-ARIA - Web Accessibility Initiative at the World Wide Web Consortium)
+					<li>Specification to make web applications and widgets more accessible to whole range of users, including those using assistive technologies such as screen readers or magnifiers.
+					<li>Provides a set of accessible attributes which can be added to HTML - roles, states and properties
+						<ul>
+							<li>role=banner/navigation/main. Roles are announced by screen readers
+							<li>states e.g. input disable, aria-disabled=true, changeable
+							<li>properties e.g. aria-label, descriptive, don’t tend to change
+					<li>Alert the user of any interactivity using aria-live<br /><a href="http://alpha.nhschoices.nhs.uk/Conditions/chickenpox/IsIt">Chicken pox alpha</a>
+				</ul>
+
+			</div>
+		</section>
+
+		<section id="p5" class="section">
+			<div class="sectioncontainer">
+				<h1>Other</h1>
+				<ul>
+					<li>Follow <a href="http://www.w3.org/WAI/intro/wcag" class="ext">WCAG</a>
+					<li>Well structured, semantic document 
+					<li>Use native elements (anchors, form inputs) instead of custom elements/directives for correct keyboard tabbing
+					<li>Giving an element tabindex=0, makes it tabable. If you have a click directive, ng-click, give it an ng-keypress as well
+					<li>Ensure focus is correct after a page 'refresh'
+					<li>Describe any link state e.g. by using class=sr for bootstrap - Click to show/hide
+				</ul>
+			</div>
+		</section>
+
+
+	</div>
+</div>
